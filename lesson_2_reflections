@@ -3,5 +3,39 @@ What happens when you initialize a repository? Why do you need to do it?
 We need to do it to make our directory a git repository so that we can leverage the benifits of git mainly version control.
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
->>Staging area acts as the middle man between working directory and the repository. Whern we run "git add <file name>" command that file is first moves to staging area. We cn add as many files as we want in the staging area before commiting it in the directory.
+>>Staging area acts as the middle man between working directory and the repository. When we run "git add <file name>" command the file moves to staging area. We can add as many files as we want in the staging area before commiting it in the directory.
 So using this we can commit the related files at once in a singe commit and leave the unrelated files.
+
+How can you use the staging area to make sure you have one commit per logical change?
+>>Staging area acts as a buffer b/w the working directory and the
+repository. You can use "git diff" command to see the differences
+between the working directory and the stagged area. Once you have 
+confirmed that these were the changes you wanted to make , you
+can add the file in thr stagging area using "git add <file name>"
+command. To be doublly sure you could use "git dif --staged" command to see the diffence b/w the staged area and the repository.
+After this you could commit the changes using "git commit" command.
+If you want to discard any changes between working directory and the stagging area the yoy can use cammand "git reset --hard". But use this command carefully as the changes were not commited yet and were present
+only in the working directory, so once thise changes are gone then you
+can not get them back. 
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+>>1)When you want to make some experimental changes you could open a 
+different branch for it. And later it become success you could merge it with the master branch.
+Branches are helpfull in the sense that you could do ur own experiment, while working on the master branch seperately. It gives you a lot
+more freedom.
+
+How do the diagrams help you visualize the branch structure?
+>>Diagrams are very usefull in understading any thing. As it has been 
+said that the a picture is equivalent to 1000 words. So through diagrams we come to knoe how actually the "commit" thing works. Everu commit has information of its parent commit. For eg:
+O-->O-->O-->O where O represent a commit.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+>>The effect is that it will merge thechanges done to the code after the branch got split out from the master branch to the latest master commit. Then it will become the latest commit. We could traverse 
+to both branch and the master from there. Afer merging the branches we can delete the branch label."git branch -d coins"
+As I said one diagram is equal to thousand words so it is very helpfull t represent it in the diagram.
+
+ What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+ >>Generally Git merges two or more branches automtcally for us  using 
+ some tricks. But when it gets a conflict(like if the changes made in the file are at same line in the code) then git need us to resolve it.
+ As a coder we know after seeing the conflict that needs to be removed
+ out from the code. Then we can merge branches.
