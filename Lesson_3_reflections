@@ -13,3 +13,10 @@ Branches are we could say name given to a commit so tha we could access it in th
 What is the benefit of having a copy of the last known state of the remote stored locally?
 >> It helps us in keeping track of if we are in sync with the remote.
 
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+>>It would become very tedious to collaborate without using Git or 
+Github. We have to then manually check for the changes made in the file 
+and have to manually save each version of file seperately so that we can
+use it later if required.
+Surely Git and Githu has made our life easier.
+
