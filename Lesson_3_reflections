@@ -20,3 +20,13 @@ and have to manually save each version of file seperately so that we can
 use it later if required.
 Surely Git and Githu has made our life easier.
 
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+>>When we are working on some big changes or experimenting we would 
+prefer to create a seperate branch. In a collaborative environment its
+a good idea to make seperate branch if you are doing some big change 
+to the exsisting code or experiminting with somr new functionality.
+Benifits of making a different branch are already stated above while if
+continue to make all the changes directely into the master branch then
+the main advantage that I can see is mainly of easy code syncing.
+
+
